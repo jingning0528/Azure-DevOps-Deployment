@@ -28,3 +28,5 @@ gh auth login
 - Copy the Object ID
 - Azure Portal > Microsoft Entra ID > Select Security Group Name
 - Groups > Add Members > Paste Object ID > Select
+
+### Issue 7: [WARNING] Security group 'xxx' does not exist.
