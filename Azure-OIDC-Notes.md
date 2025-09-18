@@ -17,10 +17,23 @@ gh auth login
 -> HTTPS
 -> Paste an authentication token
 
-### Issue 4: Security Group
+### Issue 4: Azure Account Authorization
+Error: Login failed with Error: Using auth-type: SERVICE_PRINCIPAL. Not all values are present. Ensure 'client-id' and 'tenant-id' are supplied.. Double check if the 'auth-type' is correct. Refer to https://github.com/Azure/login#readme for more information.
+
+Fixed: Azure account set to Owner/Contributer
+Reference: https://learn.microsoft.com/en-us/answers/questions/1685245/receiving-login-failed-with-error-using-auth-type
 
 ### Issue 5: Environment
-
+Fixed: Add `environment: <dev>`
+```
+jobs:
+  test-login:
+    runs-on: ubuntu-latest
+    environment: <dev>
+    steps:
+      - name: Azure Login via OIDC
+        uses: azure/login@v2
+```
 
 ### Issue 6: Adds managed identity to security group for deployment permissions
 - Azure Portal > Managed Identities.
