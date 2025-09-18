@@ -20,3 +20,11 @@ gh auth login
 ### Issue 4: Security Group
 
 ### Issue 5: Environment
+
+
+### Issue 6: Adds managed identity to security group for deployment permissions
+- Azure Portal > Managed Identities.
+- Select your identity ID
+- Copy the Object ID
+- Azure Portal > Microsoft Entra ID > Select Security Group Name
+- Groups > Add Members > Paste Object ID > Select
