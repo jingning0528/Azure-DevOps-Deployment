@@ -54,7 +54,7 @@ jobs:
 ### Issue 6: Missing Deployment Permissions
 - Problem: Managed identity does not have sufficient access to deploy resources.
 
-- Fis Steps:
+- Fix Steps:
 
 1. Go to Azure Portal → Managed Identities
 
