@@ -2,7 +2,7 @@
 
 - Basic
     
-    Authentication type:  Password. (Don’t use SSH public key, which will be banned by the privacy restriction.)
+    Authentication type:  Password. 
     
 - Networking
     
@@ -10,6 +10,8 @@
     
     Public inbound ports: None
     
+- Use Bastion to connect
+    - Portal → Virtual Machine → Connect → Bastion
 
 ## 2. Install Essentials
 
@@ -23,9 +25,9 @@ sudo apt install -y curl wget unzip zip vim net-tools dnsutils python3 python3-p
 az login --use-device-code
 ```
 
-### ⚠️Warning: Don’t cope link or code ‘XXXXXXXXX’ into browser.
+### ⚠️ Do not press Ctrl + C (shown as ^C) or the login will be interrupted.
 
-Just remember the code and type into browser, since the ^C is the interrupt shortcut which will end the login process.
+Instead, keep the terminal open, type the link in your local browser, and manually enter the code shown in your VM terminal. (Don’t copy/paste, just type it in)
 
 ```jsx
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the
@@ -33,6 +35,8 @@ code XXXXXXXXXX to authenticate.
 ```
 
 ## 4. Azure Login with MFA (multi-factor authentication) Required
+
+- MFA is required in some situation.
 
 ```jsx
 az logout
